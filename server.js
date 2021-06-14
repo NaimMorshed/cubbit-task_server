@@ -31,7 +31,7 @@ client.connect(err => {
 
     // Get Data
     app.get('/getData', (req, res) => {
-        collection.find({token: req.query.token})        
+        collection.find({uuid: req.query.uuid})        
             .toArray((err, doc) => {
                 res.send(doc);
             })
